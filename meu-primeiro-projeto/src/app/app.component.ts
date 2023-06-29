@@ -2,13 +2,15 @@ import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  template: `
+  <app-data-biding></app-data-biding> 
+  <router-outlet></router-outlet>`
+
 })
 export class AppComponent implements OnInit {
-  title = 'meu-primeiro-projeto';
   constructor() {}
-  ngOnInit() {}
+  ngOnInit():void{}
+
 }
 
 
