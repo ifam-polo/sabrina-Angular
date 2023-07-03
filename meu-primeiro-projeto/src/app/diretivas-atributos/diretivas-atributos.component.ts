@@ -8,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class DiretivasAtributosComponent implements OnInit{
 
   public valor: boolean = true;
+  public heigthPx: string = "20pix";
+  public backgroundColor: string = "red";
+
+
+  public nome: string = "";
+  public list: Array<{ nome: string }> = [{ nome: "Sabrina Frazão" }];
+
+  public date: Date = new Date();
   constructor() {}
   ngOnInit(): void {
     setInterval(()=>{
@@ -16,8 +24,21 @@ export class DiretivasAtributosComponent implements OnInit{
       }else{
         this.valor = true;
       }
+
+      if (this.heigthPx == "20px") {
+        this.heigthPx = "50px";
+        this.backgroundColor = "blue";
+      } else {
+        this.heigthPx = "20px";
+        this.backgroundColor = "red";
+      }
     }, 2000);
 
+  }
+
+  public salvar() {
+    this.list.push({ nome: this.nome });
+    this.nome = "";
   }
 
 }
