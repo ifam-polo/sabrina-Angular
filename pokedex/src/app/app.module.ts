@@ -14,7 +14,6 @@ import { RoutingModule } from './pages/routing.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-  
   ],
   providers: [],
   bootstrap: [AppComponent]
