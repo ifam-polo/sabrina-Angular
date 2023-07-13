@@ -13,7 +13,7 @@ $padding:  rem-calc(20);
     padding:$padding 0;
 
   }
-  
+
     .pokemon {
         position: relative;
         display: flex;
@@ -74,14 +74,22 @@ $padding:  rem-calc(20);
           bottom:$padding;
 
 
-         /* background: url('../../../assets/bg/background-list-pokemons.svg') no-repeat;*/
-        }
-
-        img{
-          width: rem-calc(60);
 
         }
-    }
 
+        img {
+					width: rem-calc(60);
+				}
+			}
+		}
 
+		@media (max-width: 400px) {
+			a {
+				width: 100% !important;
+			}
 }
+
+
+
+
+
