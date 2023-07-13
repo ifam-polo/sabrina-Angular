@@ -18,4 +18,12 @@ describe('BankingComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it( '(U) getPoupanca: Should have poupanca = 10', () => {
+    expect(component.getPoupanca).toEqual(10);
+  });
+
+  it('(U) getCarteira: Should have carteira = 50', () => {
+    expect(component.getCarteira).toEqual(50);
+  });
 });
