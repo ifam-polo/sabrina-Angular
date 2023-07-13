@@ -10,11 +10,7 @@
     </section>
 
     <section class="pokemon__status">
-      <img
-        [src]="pokemon[0].sprites.other.dream_world.front_default"
-        [alt]="pokemon[0].name"
-        class="slideInDown"
-      >
+      <img [src]="pokemon[0].sprites.other.dream_world.front_default" [alt]="pokemon[0].name" class="slideInDown">
 
       <article class="pokemon__status__statistics fadeIn">
         <section>
@@ -22,7 +18,7 @@
 
           <ol>
             <li *ngFor="let value of pokemon[0].stats">
-                {{ value.stat.name }}
+              {{ value.stat.name }}
 
               <strong>
                 {{ value.base_stat }}
@@ -38,10 +34,5 @@
     </section>
   </ng-template>
 
-  <img
-    src="assets/error.png"
-    alt="Deu erro na mostragem do pokemon"
-    width="100%"
-    *ngIf="apiError"
-  >
+  <img src="assets/error.png" alt="Deu erro na mostragem do pokemon" width="100%" *ngIf="apiError">
 </main>
