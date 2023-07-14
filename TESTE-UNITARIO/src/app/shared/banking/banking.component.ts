@@ -39,8 +39,8 @@ export class BankingComponent implements OnInit{
       return;
     }
 
-    this.poupaca -= depositar;
-    return this.carteira += depositar;
+    this.poupaca += depositar;
+    return this.carteira -= depositar;
   }
 
   }

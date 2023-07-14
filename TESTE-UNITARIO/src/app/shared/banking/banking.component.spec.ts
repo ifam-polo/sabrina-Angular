@@ -26,4 +26,18 @@ describe('BankingComponent', () => {
   it('(U) getCarteira: Should have carteira = 50', () => {
     expect(component.getCarteira).toEqual(50);
   });
+
+  it('(U) setSacar(): should transfer poupanca from carteira', () => {
+    component.setSacar('10');
+
+    expect(component.getPoupanca).toEqual(0);
+    expect(component.getCarteira).toEqual(60)
+  });
+
+  it('(U) setDepositar(): should transfer carteira from poupanca ', () => {
+    component.setDepositar('50');
+
+    expect(component.getCarteira).toEqual(0);
+    expect(component.getPoupanca).toEqual(60);
+  });
 });
