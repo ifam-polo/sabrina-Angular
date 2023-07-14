@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BankingComponent } from './banking.component';
+import { ListComponent } from '../investiments/components/list/list.component';
+
 
 describe('BankingComponent', () => {
   let component: BankingComponent;
@@ -8,7 +10,7 @@ describe('BankingComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [BankingComponent]
+      declarations: [BankingComponent,ListComponent]
     });
     fixture = TestBed.createComponent(BankingComponent);
     component = fixture.componentInstance;
@@ -70,7 +72,7 @@ describe('BankingComponent', () => {
     expect(el.querySelector('#get-depositar').textContent).toEqual('60');
   });
 
-  
+
   it(`(I) setDepositar(): shoud transfer carteira from poupanca`, () => {
     let el = fixture.debugElement.nativeElement;
 
