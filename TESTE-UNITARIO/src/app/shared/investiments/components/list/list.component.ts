@@ -9,35 +9,17 @@ import { ListInvestimentsService } from '../../services/list-investiments.servic
 })
 export class ListComponent implements OnInit{
 
-  public investiments:Array<Investiments> = [
-    {
-      name: "Itaú",
-      value: 100
-    },
+  public investiments!:Array<Investiments>;
 
-    {
-      name: "Banco do Brasil",
-      value: 100
-    },
-
-    {
-      name: "nubank",
-      value: 100
-    },
-
-    {
-      name: "Inter",
-      value: 100
-    },
-
-  ];
   constructor(
     private listInvestimentsService:ListInvestimentsService
   ) {}
   ngOnInit(): void {
-    this.listInvestimentsService.list().subscribe(
-      res => console.log(res)
-    )
+
+    this.listInvestimentsService
+    .list()
+    .subscribe((res) => (this.investiments = res));
+
   }
 
 }
